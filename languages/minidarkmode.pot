@@ -1,0 +1,358 @@
+# Mini Dark Mode translation template.
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mini Dark Mode 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/minidarkmode\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: minidarkmode\n"
+
+#: minidarkmode.php:58
+#: minidarkmode.php:59
+msgid "Mini Dark Mode"
+msgstr ""
+
+#: minidarkmode.php:192
+msgid "Rose (default)"
+msgstr ""
+
+#: minidarkmode.php:196
+msgid "Ocean Blue"
+msgstr ""
+
+#: minidarkmode.php:200
+msgid "Forest Green"
+msgstr ""
+
+#: minidarkmode.php:204
+msgid "Violet Purple"
+msgstr ""
+
+#: minidarkmode.php:208
+msgid "Amber Sunset"
+msgstr ""
+
+#: minidarkmode.php:212
+msgid "Slate Mono"
+msgstr ""
+
+#: minidarkmode.php:311
+msgid "Site header"
+msgstr ""
+
+#: minidarkmode.php:312
+msgid "Site footer"
+msgstr ""
+
+#: minidarkmode.php:313
+msgid "Sidebar / widget area"
+msgstr ""
+
+#: minidarkmode.php:314
+msgid "Post & page content"
+msgstr ""
+
+#: minidarkmode.php:315
+msgid "Widgets"
+msgstr ""
+
+#: minidarkmode.php:316
+msgid "Tables"
+msgstr ""
+
+#: minidarkmode.php:317
+msgid "Form fields"
+msgstr ""
+
+#: minidarkmode.php:318
+msgid "Blockquotes"
+msgstr ""
+
+#: minidarkmode.php:319
+msgid "Code blocks"
+msgstr ""
+
+#: minidarkmode.php:320
+#: minidarkmode.php:657
+msgid "Links"
+msgstr ""
+
+#: minidarkmode.php:329
+msgid "Background color"
+msgstr ""
+
+#: minidarkmode.php:330
+msgid "Text color"
+msgstr ""
+
+#: minidarkmode.php:331
+msgid "Border color"
+msgstr ""
+
+#: minidarkmode.php:544
+msgid "Restore default color"
+msgstr ""
+
+#: minidarkmode.php:556
+msgid "Mini Dark Mode 鈥?Settings"
+msgstr ""
+
+#: minidarkmode.php:563
+msgid "Floating button position"
+msgstr ""
+
+#: minidarkmode.php:566
+msgid "Bottom left"
+msgstr ""
+
+#: minidarkmode.php:567
+msgid "Bottom right"
+msgstr ""
+
+#: minidarkmode.php:572
+msgid "Toggle button style"
+msgstr ""
+
+#: minidarkmode.php:575
+msgid "Circle with moon/sun icon"
+msgstr ""
+
+#: minidarkmode.php:576
+msgid "Pill with text label"
+msgstr ""
+
+#: minidarkmode.php:581
+msgid "Toggle button icon"
+msgstr ""
+
+#: minidarkmode.php:584
+msgid "Show the moon/sun icon"
+msgstr ""
+
+#: minidarkmode.php:588
+msgid "Floating button"
+msgstr ""
+
+#: minidarkmode.php:591
+msgid "Show the fixed floating button (turn off to place the [minidarkmode] shortcode instead)"
+msgstr ""
+
+#: minidarkmode.php:595
+msgid "Keyboard shortcut"
+msgstr ""
+
+#: minidarkmode.php:598
+msgid "Let visitors toggle dark mode with Ctrl+Alt+D"
+msgstr ""
+
+#: minidarkmode.php:602
+msgid "Accent-colored content headings"
+msgstr ""
+
+#: minidarkmode.php:605
+msgid "Keep in-content H1鈥揌6 in the accent color instead of the heading color (for sites whose light theme uses colored content headings)"
+msgstr ""
+
+#: minidarkmode.php:609
+msgid "Transparent header in dark mode"
+msgstr ""
+
+#: minidarkmode.php:612
+msgid "Keep the header background transparent in dark mode"
+msgstr ""
+
+#: minidarkmode.php:618
+msgid "Color presets"
+msgstr ""
+
+#: minidarkmode.php:619
+msgid "One click fills every color field below and becomes the restore baseline 鈥?the 鈫?button next to each color restores that preset color. Swatches show: accent, content background, body text."
+msgstr ""
+
+#: minidarkmode.php:635
+msgid "Global palette"
+msgstr ""
+
+#: minidarkmode.php:636
+msgid "Reference palette used as the fallback values for the theme and surface colors below. Edit it only if you want different fallbacks."
+msgstr ""
+
+#: minidarkmode.php:639
+msgid "Brand"
+msgstr ""
+
+#: minidarkmode.php:639
+msgid "Baseline brand color 鈥?Accent and Links fall back to this"
+msgstr ""
+
+#: minidarkmode.php:640
+msgid "Alternate brand"
+msgstr ""
+
+#: minidarkmode.php:640
+msgid "Baseline secondary color 鈥?Link hover falls back to this"
+msgstr ""
+
+#: minidarkmode.php:641
+msgid "Headings"
+msgstr ""
+
+#: minidarkmode.php:641
+msgid "Baseline heading color 鈥?falls back for Theme Headings"
+msgstr ""
+
+#: minidarkmode.php:642
+#: minidarkmode.php:660
+msgid "Body text"
+msgstr ""
+
+#: minidarkmode.php:642
+msgid "Baseline text color 鈥?falls back for Theme Body text"
+msgstr ""
+
+#: minidarkmode.php:643
+msgid "Primary background"
+msgstr ""
+
+#: minidarkmode.php:643
+msgid "Baseline surface 鈥?falls back for Content background"
+msgstr ""
+
+#: minidarkmode.php:644
+msgid "Secondary background"
+msgstr ""
+
+#: minidarkmode.php:644
+msgid "Used directly: inputs, table headers, sub-menus, breadcrumbs"
+msgstr ""
+
+#: minidarkmode.php:645
+msgid "Subtle background"
+msgstr ""
+
+#: minidarkmode.php:645
+msgid "Spare baseline 鈥?not applied by the bundled rules"
+msgstr ""
+
+#: minidarkmode.php:646
+msgid "Alternate background"
+msgstr ""
+
+#: minidarkmode.php:646
+msgid "Baseline page background 鈥?falls back for Site background"
+msgstr ""
+
+#: minidarkmode.php:647
+msgid "Supporting color"
+msgstr ""
+
+#: minidarkmode.php:647
+msgid "Baseline border color 鈥?falls back for Borders"
+msgstr ""
+
+#: minidarkmode.php:652
+msgid "Theme colors"
+msgstr ""
+
+#: minidarkmode.php:653
+msgid "Directly control text and component colors in dark mode."
+msgstr ""
+
+#: minidarkmode.php:656
+msgid "Accent"
+msgstr ""
+
+#: minidarkmode.php:656
+msgid "Toggle button, blockquote borders, footer and breadcrumb links, calendar event links"
+msgstr ""
+
+#: minidarkmode.php:657
+msgid "Every link on the site in dark mode"
+msgstr ""
+
+#: minidarkmode.php:658
+msgid "Link hover"
+msgstr ""
+
+#: minidarkmode.php:658
+msgid "Links when the pointer is over them"
+msgstr ""
+
+#: minidarkmode.php:659
+msgid "Headings (H1鈥揌6)"
+msgstr ""
+
+#: minidarkmode.php:659
+msgid "Post titles, widget titles and content headings"
+msgstr ""
+
+#: minidarkmode.php:660
+msgid "Paragraphs, meta text and most content"
+msgstr ""
+
+#: minidarkmode.php:661
+msgid "Borders"
+msgstr ""
+
+#: minidarkmode.php:661
+msgid "Tables, dividers and sub-menu borders"
+msgstr ""
+
+#: minidarkmode.php:666
+msgid "Surface colors"
+msgstr ""
+
+#: minidarkmode.php:667
+msgid "Directly control background and surface colors in dark mode."
+msgstr ""
+
+#: minidarkmode.php:670
+msgid "Site background"
+msgstr ""
+
+#: minidarkmode.php:670
+msgid "The base page background behind everything"
+msgstr ""
+
+#: minidarkmode.php:671
+msgid "Content background"
+msgstr ""
+
+#: minidarkmode.php:671
+msgid "Post/page cards, widgets, footer and form areas"
+msgstr ""
+
+#: minidarkmode.php:676
+msgid "Advanced tweaks"
+msgstr ""
+
+#: minidarkmode.php:677
+msgid "Fine-tune how a few parts of the site look in dark mode. Pick a target and a color 鈥?no CSS needed. Everything here only applies while dark mode is on."
+msgstr ""
+
+#: minidarkmode.php:685
+msgid "Custom rules"
+msgstr ""
+
+#: minidarkmode.php:705
+msgid "Remove"
+msgstr ""
+
+#: minidarkmode.php:718
+msgid "+ Add rule"
+msgstr ""
+
+#: minidarkmode.php:829
+msgid "Toggle dark mode"
+msgstr ""
+
+#: minidarkmode.php:834
+msgid "Dark Mode"
+msgstr ""
+
+#: minidarkmode.php:835
+msgid "Light Mode"
+msgstr ""

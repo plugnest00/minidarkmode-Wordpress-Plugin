@@ -1,0 +1,415 @@
+/* ============================================================
+ * Mini Dark Mode — featherweight dark mode
+ * Switches html.mdm-dark-mode + a set of CSS variables. Images are
+ * never touched (no filters, no src swapping) — zero conflicts
+ * with gallery / portfolio plugins.
+ * ============================================================ */
+
+/* ---------- Dark palette variables ---------- */
+html.mdm-dark-mode {
+	color-scheme: dark;
+
+	/* Global palette (reference swatches, defaults) */
+	--mdm-palette-brand: #e878a0;
+	--mdm-palette-brand-alt: #ff9ec0;
+	--mdm-palette-heading: #f0f0f8;
+	--mdm-palette-text: #d9d9e3;
+	--mdm-palette-bg-primary: #1d1d28;
+	--mdm-palette-bg-secondary: #262633;
+	--mdm-palette-bg-subtle: #22222e;
+	--mdm-palette-bg-alt: #14141b;
+	--mdm-palette-other: #33334a;
+
+	/* Theme colors (drive the actual appearance) */
+	--mdm-accent: var(--mdm-palette-brand);
+	--mdm-link: var(--mdm-palette-brand);
+	--mdm-link-hover: var(--mdm-palette-brand-alt);
+	--mdm-heading: var(--mdm-palette-heading);
+	--mdm-text: var(--mdm-palette-text);
+	--mdm-border: var(--mdm-palette-other);
+
+	/* Surface colors (drive the actual appearance) */
+	--mdm-bg: var(--mdm-palette-bg-alt);
+	--mdm-surface: var(--mdm-palette-bg-primary);
+
+	/* Derived helpers (backwards compatible) */
+	--mdm-accent-soft: rgba(232, 120, 160, 0.12);
+	--mdm-accent-soft: color-mix(in srgb, var(--mdm-accent) 12%, transparent);
+	--mdm-text-soft: #9d9db3;
+	--mdm-text-faint: #7c7c92;
+	--mdm-surface-2: var(--mdm-palette-bg-secondary);
+	--mdm-surface-subtle: var(--mdm-palette-bg-subtle);
+}
+
+/* ---------- Base ---------- */
+html.mdm-dark-mode body {
+	background-color: var(--mdm-bg) !important;
+	color: var(--mdm-text) !important;
+}
+
+html.mdm-dark-mode,
+html.mdm-dark-mode body {
+	transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ---------- Headings ---------- */
+html.mdm-dark-mode h1,
+html.mdm-dark-mode h2,
+html.mdm-dark-mode h3,
+html.mdm-dark-mode h4,
+html.mdm-dark-mode h5,
+html.mdm-dark-mode h6,
+html.mdm-dark-mode .entry-title,
+html.mdm-dark-mode .ast-archive-title,
+html.mdm-dark-mode .widget-title {
+	color: var(--mdm-heading) !important;
+}
+
+/* ---------- Links ---------- */
+html.mdm-dark-mode a:not(.minidarkmode-ignore) {
+	color: var(--mdm-link) !important;
+}
+html.mdm-dark-mode a:not(.minidarkmode-ignore):hover {
+	color: var(--mdm-link-hover) !important;
+}
+
+/* ---------- Secondary text ---------- */
+html.mdm-dark-mode .entry-meta,
+html.mdm-dark-mode .posted-on,
+html.mdm-dark-mode .site-description {
+	color: var(--mdm-text-soft) !important;
+}
+
+/* ---------- Header / footer ---------- */
+/* Header transparency in dark mode is controlled by the plugin setting
+ * (on by default) and emitted as inline CSS. */
+html.mdm-dark-mode .main-header-menu .menu-link,
+html.mdm-dark-mode .site-branding .site-title {
+	color: var(--mdm-text) !important;
+}
+html.mdm-dark-mode .main-header-menu .sub-menu {
+	background-color: var(--mdm-surface-2) !important;
+	border-color: var(--mdm-border) !important;
+}
+html.mdm-dark-mode .site-footer,
+html.mdm-dark-mode .site-primary-footer-wrap,
+html.mdm-dark-mode .site-copyright {
+	background-color: var(--mdm-surface) !important;
+	border-color: var(--mdm-border) !important;
+	color: var(--mdm-text) !important;
+}
+html.mdm-dark-mode .site-footer p,
+html.mdm-dark-mode .site-footer span,
+html.mdm-dark-mode .site-footer a,
+html.mdm-dark-mode .site-copyright p,
+html.mdm-dark-mode .site-copyright span {
+	color: var(--mdm-text) !important;
+}
+html.mdm-dark-mode .site-footer a,
+html.mdm-dark-mode .site-copyright a {
+	color: var(--mdm-accent) !important;
+}
+
+/* ---------- Content cards / posts ---------- */
+html.mdm-dark-mode .ast-article-single,
+html.mdm-dark-mode .ast-article-post,
+html.mdm-dark-mode .ast-separate-container .ast-article-single,
+html.mdm-dark-mode .ast-separate-container .ast-article-post,
+html.mdm-dark-mode .ast-comment-formwrap,
+html.mdm-dark-mode .comment-respond,
+html.mdm-dark-mode .ast-author-box,
+html.mdm-dark-mode .widget,
+html.mdm-dark-mode .widget-area .widget {
+	background-color: var(--mdm-surface) !important;
+	border-color: var(--mdm-border) !important;
+	color: var(--mdm-text) !important;
+}
+
+html.mdm-dark-mode .entry-content,
+html.mdm-dark-mode .post-content {
+	color: var(--mdm-text) !important;
+}
+
+/* ---------- Inputs ---------- */
+html.mdm-dark-mode input,
+html.mdm-dark-mode textarea,
+html.mdm-dark-mode select,
+html.mdm-dark-mode .ast-search-form input,
+html.mdm-dark-mode .wp-block-search__input {
+	background-color: var(--mdm-surface-2) !important;
+	color: var(--mdm-text) !important;
+	border-color: var(--mdm-border) !important;
+}
+
+/* Buttons keep their theme styling in dark mode (no forced fill). */
+
+/* ---------- Tables / quotes / code ---------- */
+html.mdm-dark-mode table,
+html.mdm-dark-mode .entry-content table {
+	background-color: var(--mdm-surface) !important;
+	color: var(--mdm-text) !important;
+	border-color: var(--mdm-border) !important;
+}
+html.mdm-dark-mode table th,
+html.mdm-dark-mode .entry-content table th {
+	background-color: var(--mdm-surface-2) !important;
+	color: var(--mdm-heading) !important;
+}
+html.mdm-dark-mode table td,
+html.mdm-dark-mode .entry-content table td {
+	border-color: var(--mdm-border) !important;
+}
+
+html.mdm-dark-mode blockquote,
+html.mdm-dark-mode .entry-content blockquote,
+html.mdm-dark-mode .wp-block-quote,
+html.mdm-dark-mode .wp-block-pullquote {
+	background-color: var(--mdm-surface) !important;
+	border-color: var(--mdm-accent) !important;
+	color: var(--mdm-text) !important;
+}
+
+html.mdm-dark-mode code,
+html.mdm-dark-mode pre {
+	background-color: var(--mdm-surface-2) !important;
+	color: var(--mdm-text) !important;
+}
+
+/* ---------- Separators ---------- */
+html.mdm-dark-mode hr,
+html.mdm-dark-mode .wp-block-separator,
+html.mdm-dark-mode .entry-content hr {
+	border-color: var(--mdm-border) !important;
+	background: var(--mdm-border) !important;
+}
+
+/* ---------- Page builders: keep containers transparent ---------- */
+html.mdm-dark-mode .elementor-section,
+html.mdm-dark-mode .elementor-column,
+html.mdm-dark-mode .elementor-widget,
+html.mdm-dark-mode .elementor-container,
+html.mdm-dark-mode .uagb-container,
+html.mdm-dark-mode .uagb-section,
+html.mdm-dark-mode .wp-block-uagb-container,
+html.mdm-dark-mode .wp-block-uagb-advanced-heading {
+	background-color: transparent !important;
+}
+
+/* Headings: keep inline colors (brand colors), brighten only the rest */
+html.mdm-dark-mode .elementor-widget-heading .elementor-heading-title:not([style*="color"]),
+html.mdm-dark-mode .uagb-heading-text:not([style*="color"]) {
+	color: var(--mdm-heading) !important;
+}
+
+html.mdm-dark-mode .elementor-widget-text-editor,
+html.mdm-dark-mode .elementor-text-editor,
+html.mdm-dark-mode .uagb-text-editor {
+	color: var(--mdm-text) !important;
+}
+
+/* Elementor tabs: brighten titles and content */
+html.mdm-dark-mode .elementor-tab-title,
+html.mdm-dark-mode .elementor-tab-content,
+html.mdm-dark-mode .elementor-tabs .elementor-tab-content,
+html.mdm-dark-mode .elementor-tabs .elementor-tab-title {
+	color: var(--mdm-text) !important;
+}
+html.mdm-dark-mode .elementor-tab-title.elementor-active {
+	color: var(--mdm-heading) !important;
+}
+html.mdm-dark-mode .elementor-tab-content a {
+	color: var(--mdm-accent) !important;
+}
+
+/* Elementor accordion / toggle */
+html.mdm-dark-mode .elementor-accordion .elementor-tab-title,
+html.mdm-dark-mode .elementor-toggle .elementor-tab-title,
+html.mdm-dark-mode .elementor-accordion .elementor-tab-content,
+html.mdm-dark-mode .elementor-toggle .elementor-tab-content {
+	color: var(--mdm-text) !important;
+}
+
+/* ---------- Visual Portfolio: container colors only, images untouched ---------- */
+html.mdm-dark-mode .vp-portfolio,
+html.mdm-dark-mode .vp-portfolio__item {
+	background-color: transparent !important;
+}
+html.mdm-dark-mode .vp-portfolio__item-overlay {
+	background-color: rgba(0, 0, 0, 0.55) !important;
+	color: #fff !important;
+}
+
+/* ---------- MEC event calendar ---------- */
+html.mdm-dark-mode .mec-wrap,
+html.mdm-dark-mode .mec-container,
+html.mdm-dark-mode .mec-single-event,
+html.mdm-dark-mode .mec-event-list-standard,
+html.mdm-dark-mode .mec-calendar {
+	background-color: var(--mdm-surface) !important;
+	color: var(--mdm-text) !important;
+}
+html.mdm-dark-mode .mec-event-list-standard .mec-event-title a,
+html.mdm-dark-mode .mec-single-event .mec-event-content a {
+	color: var(--mdm-accent) !important;
+}
+
+/* ---------- wpDiscuz comments ---------- */
+html.mdm-dark-mode #wpdcom,
+html.mdm-dark-mode #wpdcom .wpd-form-wrap,
+html.mdm-dark-mode #wpdcom .wpd-comment {
+	background-color: var(--mdm-surface) !important;
+	color: var(--mdm-text) !important;
+	border-color: var(--mdm-border) !important;
+}
+html.mdm-dark-mode #wpdcom .wpd-comment-text {
+	color: var(--mdm-text) !important;
+}
+html.mdm-dark-mode #wpdcom textarea {
+	background-color: var(--mdm-surface-2) !important;
+	color: var(--mdm-text) !important;
+	border-color: var(--mdm-border) !important;
+}
+
+/* ---------- Breadcrumbs ---------- */
+html.mdm-dark-mode .ast-breadcrumbs-wrapper,
+html.mdm-dark-mode .rank-math-breadcrumb {
+	color: var(--mdm-text-soft) !important;
+}
+html.mdm-dark-mode .ast-breadcrumbs-wrapper .ast-breadcrumbs,
+html.mdm-dark-mode .ast-breadcrumbs-wrapper .breadcrumbs,
+html.mdm-dark-mode .rank-math-breadcrumb p {
+	background: var(--mdm-surface-2) !important;
+	border-color: var(--mdm-border) !important;
+	color: var(--mdm-text-soft) !important;
+}
+html.mdm-dark-mode .ast-breadcrumbs-wrapper a,
+html.mdm-dark-mode .rank-math-breadcrumb a {
+	color: var(--mdm-accent) !important;
+}
+html.mdm-dark-mode .ast-breadcrumbs-wrapper .trail-end,
+html.mdm-dark-mode .ast-breadcrumbs-wrapper .breadcrumb_last,
+html.mdm-dark-mode .rank-math-breadcrumb .last {
+	color: var(--mdm-heading) !important;
+}
+
+/* ============================================================
+ * Dark text brightening: inline-colored text in content areas
+ * is brightened so dark text stays readable on dark surfaces.
+ * (Text whose inline color matches the accent is preserved via
+ * generated rules from the plugin settings.)
+ * ============================================================ */
+html.mdm-dark-mode [style*="color:#"],
+html.mdm-dark-mode [style*="color: #"],
+html.mdm-dark-mode [style*="color:rgb"],
+html.mdm-dark-mode [style*="color: rgb"] {
+	color: var(--mdm-text) !important;
+}
+
+html.mdm-dark-mode .entry-content b,
+html.mdm-dark-mode .entry-content strong,
+html.mdm-dark-mode .elementor-widget-text-editor b,
+html.mdm-dark-mode .elementor-widget-text-editor strong {
+	color: var(--mdm-heading) !important;
+}
+
+/* Spans inside colored headings inherit the parent color */
+html.mdm-dark-mode .elementor-widget-heading .elementor-heading-title[style*="color"] span,
+html.mdm-dark-mode .uagb-heading-text[style*="color"] span,
+html.mdm-dark-mode .entry-title span {
+	color: inherit !important;
+}
+
+html.mdm-dark-mode .entry-content mark,
+html.mdm-dark-mode .entry-content em {
+	color: var(--mdm-text) !important;
+}
+
+/* ============================================================
+ * Toggle button
+ * Position, size, radius and colors are inline styles printed
+ * by PHP (cache/optimizer proof); this sheet adds hover, icon
+ * switching, labels and the inline variant.
+ * ============================================================ */
+.minidarkmode-toggle {
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.minidarkmode-toggle:hover {
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 14px 30px -8px rgba(0, 0, 0, 0.65) !important;
+	box-shadow: 0 14px 30px -8px color-mix(in srgb, var(--mdm-accent, #e878a0) 70%, transparent) !important;
+}
+
+.minidarkmode-toggle .minidarkmode-icon {
+	width: 22px;
+	height: 22px;
+	flex: none;
+}
+
+.minidarkmode-toggle .minidarkmode-icon-sun {
+	display: none;
+}
+
+html.mdm-dark-mode .minidarkmode-toggle .minidarkmode-icon-moon {
+	display: none;
+}
+
+html.mdm-dark-mode .minidarkmode-toggle .minidarkmode-icon-sun {
+	display: block;
+}
+
+/* Pill style: the icon shows the CURRENT mode — sun in light mode, moon in
+ * dark mode (the text label carries the action). Placed after the base
+ * rules: equal specificity, later wins. */
+.minidarkmode-toggle--pill .minidarkmode-icon-moon {
+	display: none;
+}
+
+.minidarkmode-toggle--pill .minidarkmode-icon-sun {
+	display: block;
+}
+
+html.mdm-dark-mode .minidarkmode-toggle--pill .minidarkmode-icon-moon {
+	display: block;
+}
+
+html.mdm-dark-mode .minidarkmode-toggle--pill .minidarkmode-icon-sun {
+	display: none;
+}
+
+/* Pill labels: "Dark Mode" in light, "Light Mode" in dark */
+.minidarkmode-toggle .minidarkmode-label {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	white-space: nowrap;
+}
+.minidarkmode-toggle .minidarkmode-label-to-light {
+	display: none;
+}
+html.mdm-dark-mode .minidarkmode-toggle .minidarkmode-label-to-light {
+	display: inline;
+}
+html.mdm-dark-mode .minidarkmode-toggle .minidarkmode-label-to-dark {
+	display: none;
+}
+
+/* Focus visibility for keyboard users */
+.minidarkmode-toggle:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+	html.mdm-dark-mode,
+	html.mdm-dark-mode body {
+		transition: none;
+	}
+	.minidarkmode-toggle {
+		transition: none;
+	}
+	.minidarkmode-toggle:hover {
+		transform: none;
+	}
+}
